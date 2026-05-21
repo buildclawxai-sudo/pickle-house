@@ -9,16 +9,16 @@ const materialCompare = [
     description: '傳統設計，由六角形蜂窩結構組成',
     pros: ['傳統設計，技術成熟', '重量較輕', '價格較親民'],
     cons: ['手感較硬', '長期使用可能變形', '甜點較小'],
-    image: 'https://upload.wikimedia.org/wikipedia/commons/9/90/3D_PRINTED_HEXAGONAL_HONEYCOMB_CORE_STRUCTURE.jpg',
-    imageAlt: '蜂窩核心結構示意圖'
+    image: '/compare.png',
+    imageAlt: '蜂窩核心與泡棉核心比較圖'
   },
   {
     name: '泡棉核心',
     description: '新一代技術，由聚合物泡沫組成',
     pros: ['手感柔軟舒適', '甜點更大', '吸震效果佳', '更耐用不易變形'],
     cons: ['重量稍重', '價格較高'],
-    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Solid_polymeric_foam.tif/lossless-page1-960px-Solid_polymeric_foam.tif.png',
-    imageAlt: '泡棉核心結構示意圖'
+    image: '/compare.png',
+    imageAlt: '蜂窩核心與泡棉核心比較圖'
   }
 ];
 
@@ -184,11 +184,6 @@ export default function AboutSection() {
                 </div>
               ))}
             </div>
-            
-            {/* 圖片來源說明 */}
-            <p className="text-forest/40 text-xs text-center mt-6">
-              圖片來源：Wikimedia Commons（CC0 公眾領域 / CC BY 4.0）
-            </p>
           </div>
         </div>
       </div>
