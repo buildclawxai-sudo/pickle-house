@@ -3,25 +3,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-const materialCompare = [
-  {
-    name: '蜂窩核心',
-    description: '傳統設計，由六角形蜂窩結構組成',
-    pros: ['傳統設計，技術成熟', '重量較輕', '價格較親民'],
-    cons: ['手感較硬', '長期使用可能變形', '甜點較小'],
-    image: '/compare.png',
-    imageAlt: '蜂窩核心與泡棉核心比較圖'
-  },
-  {
-    name: '泡棉核心',
-    description: '新一代技術，由聚合物泡沫組成',
-    pros: ['手感柔軟舒適', '甜點更大', '吸震效果佳', '更耐用不易變形'],
-    cons: ['重量稍重', '價格較高'],
-    image: '/compare.png',
-    imageAlt: '蜂窩核心與泡棉核心比較圖'
-  }
-];
-
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -125,64 +106,15 @@ export default function AboutSection() {
             <p className="text-forest/60 text-center mb-10">
               我們代理的品牌多採用新一代泡棉核心技術
             </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              {materialCompare.map((material, index) => (
-                <div
-                  key={index}
-                  className={`rounded-softer overflow-hidden ${
-                    index === 1
-                      ? 'bg-forest/5 border-2 border-forest/20'
-                      : 'bg-white/60'
-                  }`}
-                >
-                  {/* 材質圖片 */}
-                  <div className="relative h-48 bg-gradient-to-br from-cream to-soft-gray">
-                    <Image
-                      src={material.image}
-                      alt={material.imageAlt}
-                      fill
-                      className="object-cover"
-                      unoptimized
-                    />
-                  </div>
-                  
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-2">
-                      {index === 1 && (
-                        <span className="bg-forest text-cream text-xs px-2 py-1 rounded-full">推薦</span>
-                      )}
-                      <h4 className="font-serif text-xl font-semibold text-forest">
-                        {material.name}
-                      </h4>
-                    </div>
-                    <p className="text-forest/60 text-sm mb-4">{material.description}</p>
-
-                    <div className="mb-4">
-                      <p className="text-xs text-sage mb-2 font-medium">優點</p>
-                      <ul className="space-y-1">
-                        {material.pros.map((pro, i) => (
-                          <li key={i} className="flex items-start gap-2 text-forest/70 text-sm">
-                            <span className="text-sage text-xs mt-1">+</span>
-                            {pro}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div>
-                      <p className="text-xs text-khaki mb-2 font-medium">注意</p>
-                      <ul className="space-y-1">
-                        {material.cons.map((con, i) => (
-                          <li key={i} className="flex items-start gap-2 text-forest/60 text-sm">
-                            <span className="text-khaki text-xs mt-1">−</span>
-                            {con}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="bg-white/60 rounded-softer p-6 shadow-soft">
+              <Image
+                src="/compare.png"
+                alt="蜂窩核心與泡棉核心比較圖"
+                width={1200}
+                height={600}
+                className="w-full h-auto object-contain"
+                priority
+              />
             </div>
           </div>
         </div>
