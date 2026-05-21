@@ -29,7 +29,7 @@ const brandsProducts = [
       {
         name: 'EPP Turbo',
         tagline: '浮動泡沫核心，紮實手感',
-        description: '浮動 EPP 泡沫核心，CFC 面面層，穩定且易於控制',
+        description: '浮動 EPP 泡沫核心，CFC 面面面面層，穩定且易於控制',
         badge: '中階首選',
         playerType: '喜歡紮實連結手感的玩家、追求穩定表現',
         style: '控制型 / 穩定手感',
@@ -126,15 +126,6 @@ const brandsProducts = [
         image: 'https://m.media-amazon.com/images/I/71oUwNQefdL._AC_UL400_.jpg'
       },
       {
-        name: 'VS-YBV51',
-        tagline: '無邊框設計，超大甜點',
-        description: '無邊框設計，甜點更大，新手友善',
-        badge: '新手推薦',
-        playerType: '剛接觸匹克球的新手、價格親民好上手',
-        style: '新手友善 / 大甜點',
-        image: 'https://m.media-amazon.com/images/I/71AsGe1jcHL._AC_UL400_.jpg'
-      },
-      {
         name: 'VS-YBV34',
         tagline: '輕量化設計，快速揮拍',
         description: '輕量化設計，揮拍快速，適合反應快的打法',
@@ -142,6 +133,15 @@ const brandsProducts = [
         playerType: '喜歡快速揮拍的速度型玩家、反應快',
         style: '速度型 / 輕量',
         image: 'https://m.media-amazon.com/images/I/71czKdCOBwL._AC_UL400_.jpg'
+      },
+      {
+        name: 'VS-YBV51',
+        tagline: '無邊框設計，超大甜點',
+        description: '無邊框設計，甜點更大，新手友善',
+        badge: '新手推薦',
+        playerType: '剛接觸匹克球的新手、價格親民好上手',
+        style: '新手友善 / 大甜點',
+        image: 'https://m.media-amazon.com/images/I/71AsGe1jcHL._AC_UL400_.jpg'
       }
     ]
   }
