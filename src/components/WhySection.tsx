@@ -89,7 +89,7 @@ export default function WhySection() {
           </div>
 
           {/* Reasons Grid */}
-          <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
+          <div className="grid sm:grid-cols-2 gap-8 md:gap-12 mb-20">
             {reasons.map((reason, index) => (
               <div
                 key={index}
@@ -108,6 +108,73 @@ export default function WhySection() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* 新手友善說明 */}
+          <div className="bg-gradient-to-r from-sage/10 to-khaki/10 rounded-softer p-8">
+            <h3 className="font-serif text-2xl font-semibold text-forest mb-6 text-center">
+              新手友善，從第一拍開始
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-semibold text-forest mb-3">為什麼新手需要特別挑選？</h4>
+                <ul className="space-y-2 text-forest/70 text-sm">
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>新手擊球不穩定，需要更大的甜點來包容失誤</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>太重的球拍容易造成手腕疲勞，影響學習意願</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>太硬的手感會讓擊球回饋不明顯，難以建立手感</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>我們精選的球拍，讓新手更快體驗到擊球的樂趣</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-forest mb-3">我們對新手的優勢</h4>
+                <ul className="space-y-2 text-forest/70 text-sm">
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>SweetSpot Pro 專為新手設計，甜點比一般球拍大 20%</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>泡棉核心吸震效果佳，手腕不會痠痛</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>輕量化設計，揮拍更輕鬆，學習更有效率</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>多種價位選擇，不用花大錢就能開始匹克球生活</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -3,6 +3,19 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
+const materialCompare = [
+  {
+    name: '蜂窩核心',
+    pros: ['傳統設計，技術成熟', '重量較輕', '價格較親民'],
+    cons: ['手感較硬', '長期使用可能變形', '甜點較小']
+  },
+  {
+    name: '泡棉核心',
+    pros: ['手感柔軟舒適', '甜點更大', '吸震效果佳', '更耐用不易變形'],
+    cons: ['重量稍重', '價格較高']
+  }
+];
+
 export default function AboutSection() {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -36,7 +49,7 @@ export default function AboutSection() {
           ref={ref}
           className={`fade-section ${isVisible ? 'visible' : ''}`}
         >
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center mb-24">
             {/* Left: Text Content */}
             <div>
               <div className="inline-block bg-sage/10 px-4 py-1.5 rounded-full mb-6">
@@ -95,6 +108,61 @@ export default function AboutSection() {
 
               {/* Floating Accent */}
               <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-forest/10 rounded-full blur-xl"></div>
+            </div>
+          </div>
+
+          {/* 材質差異比較 */}
+          <div>
+            <h3 className="font-serif text-2xl md:text-3xl font-semibold text-forest text-center mb-4">
+              蜂窩核心 vs 泡棉核心，有什麼不同？
+            </h3>
+            <p className="text-forest/60 text-center mb-10">
+              我們代理的品牌多採用新一代泡棉核心技術
+            </p>
+            <div className="grid md:grid-cols-2 gap-8">
+              {materialCompare.map((material, index) => (
+                <div
+                  key={index}
+                  className={`rounded-softer p-6 ${
+                    index === 1
+                      ? 'bg-forest/5 border-2 border-forest/20'
+                      : 'bg-white/60'
+                  }`}
+                >
+                  <div className="flex items-center gap-3 mb-4">
+                    {index === 1 && (
+                      <span className="bg-forest text-cream text-xs px-2 py-1 rounded-full">推薦</span>
+                    )}
+                    <h4 className="font-serif text-xl font-semibold text-forest">
+                      {material.name}
+                    </h4>
+                  </div>
+
+                  <div className="mb-4">
+                    <p className="text-xs text-sage mb-2 font-medium">優點</p>
+                    <ul className="space-y-1">
+                      {material.pros.map((pro, i) => (
+                        <li key={i} className="flex items-start gap-2 text-forest/70 text-sm">
+                          <span className="text-sage text-xs mt-1">+</span>
+                          {pro}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <p className="text-xs text-khaki mb-2 font-medium">注意</p>
+                    <ul className="space-y-1">
+                      {material.cons.map((con, i) => (
+                        <li key={i} className="flex items-start gap-2 text-forest/60 text-sm">
+                          <span className="text-khaki text-xs mt-1">−</span>
+                          {con}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

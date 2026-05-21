@@ -128,19 +128,6 @@ const brands = [
   }
 ];
 
-const materialCompare = [
-  {
-    name: '蜂窩核心',
-    pros: ['傳統設計，技術成熟', '重量較輕', '價格較親民'],
-    cons: ['手感較硬', '長期使用可能變形', '甜點較小']
-  },
-  {
-    name: '泡棉核心',
-    pros: ['手感柔軟舒適', '甜點更大', '吸震效果佳', '更耐用不易變形'],
-    cons: ['重量稍重', '價格較高']
-  }
-];
-
 export default function BrandsSection() {
   const [isVisible, setIsVisible] = useState(false);
   const [activeBrand, setActiveBrand] = useState(0);
@@ -259,7 +246,7 @@ export default function BrandsSection() {
           </div>
 
           {/* 品牌推薦 - 根據選擇的品牌顯示 */}
-          <div className="mb-20">
+          <div>
             <h3 className="font-serif text-2xl md:text-3xl font-semibold text-forest text-center mb-10">
               {brands[activeBrand].name} 適合什麼樣的你？
             </h3>
@@ -281,128 +268,6 @@ export default function BrandsSection() {
                   <p className="text-forest/60 text-sm leading-relaxed">
                     {item.reason}
                   </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* 新手友善說明 */}
-          <div className="bg-gradient-to-r from-sage/10 to-khaki/10 rounded-softer p-8 mb-20">
-            <h3 className="font-serif text-2xl font-semibold text-forest mb-6 text-center">
-              新手友善，從第一拍開始
-            </h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h4 className="font-semibold text-forest mb-3">為什麼新手需要特別挑選？</h4>
-                <ul className="space-y-2 text-forest/70 text-sm">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>新手擊球不穩定，需要更大的甜點來包容失誤</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>太重的球拍容易造成手腕疲勞，影響學習意願</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>太硬的手感會讓擊球回饋不明顯，難以建立手感</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>我們精選的球拍，讓新手更快體驗到擊球的樂趣</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="font-semibold text-forest mb-3">我們對新手的優勢</h4>
-                <ul className="space-y-2 text-forest/70 text-sm">
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>SweetSpot Pro / Champion 專為新手設計，甜點比一般球拍大 20%</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>泡棉核心吸震效果佳，手腕不會痠痛</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>輕量化設計，揮拍更輕鬆，學習更有效率</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <svg className="w-4 h-4 text-sage mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    <span>多種價位選擇，不用花大錢就能開始匹克球生活</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* 材質差異比較 */}
-          <div>
-            <h3 className="font-serif text-2xl md:text-3xl font-semibold text-forest text-center mb-4">
-              蜂窩核心 vs 泡棉核心，有什麼不同？
-            </h3>
-            <p className="text-forest/60 text-center mb-10">
-              我們代理的品牌多採用新一代泡棉核心技術
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              {materialCompare.map((material, index) => (
-                <div
-                  key={index}
-                  className={`rounded-softer p-6 ${
-                    index === 1
-                      ? 'bg-forest/5 border-2 border-forest/20'
-                      : 'bg-white/60'
-                  }`}
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    {index === 1 && (
-                      <span className="bg-forest text-cream text-xs px-2 py-1 rounded-full">推薦</span>
-                    )}
-                    <h4 className="font-serif text-xl font-semibold text-forest">
-                      {material.name}
-                    </h4>
-                  </div>
-
-                  <div className="mb-4">
-                    <p className="text-xs text-sage mb-2 font-medium">優點</p>
-                    <ul className="space-y-1">
-                      {material.pros.map((pro, i) => (
-                        <li key={i} className="flex items-start gap-2 text-forest/70 text-sm">
-                          <span className="text-sage text-xs mt-1">+</span>
-                          {pro}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div>
-                    <p className="text-xs text-khaki mb-2 font-medium">注意</p>
-                    <ul className="space-y-1">
-                      {material.cons.map((con, i) => (
-                        <li key={i} className="flex items-start gap-2 text-forest/60 text-sm">
-                          <span className="text-khaki text-xs mt-1">−</span>
-                          {con}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               ))}
             </div>
