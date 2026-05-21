@@ -1,0 +1,130 @@
+/* Google Fonts - must be first */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+/* Custom CSS Variables */
+:root {
+  --color-cream: #F5F3EE;
+  --color-sage-green: #8B9A8B;
+  --color-forest-green: #2D4A3E;
+  --color-khaki: #C4B8A5;
+  --color-warm-white: #FAFAF8;
+  --color-soft-gray: #E8E6E1;
+}
+
+/* Tailwind Theme */
+@theme inline {
+  --color-cream: #F5F3EE;
+  --color-sage: #8B9A8B;
+  --color-forest: #2D4A3E;
+  --color-khaki: #C4B8A5;
+  --color-warm-white: #FAFAF8;
+  --color-soft-gray: #E8E6E1;
+
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+
+  --shadow-soft: 0 4px 20px rgba(45, 74, 62, 0.08);
+  --shadow-card: 0 8px 32px rgba(45, 74, 62, 0.1);
+  --shadow-hover: 0 12px 40px rgba(45, 74, 62, 0.15);
+
+  --radius-soft: 12px;
+  --radius-softer: 20px;
+
+  --animate-fade-in: fadeIn 0.8s ease-out forwards;
+  --animate-slide-up: slideUp 0.8s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Base Styles */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: #F5F3EE;
+  color: #2D4A3E;
+}
+
+/* Paper Texture Background - subtle paper feel */
+.paper-texture {
+  background-color: #F5F3EE;
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(196, 184, 165, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(139, 154, 139, 0.05) 0%, transparent 50%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F3EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C4B8A5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8B9A8B;
+}
+
+/* Button Styles */
+.btn-primary {
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45, 74, 62, 0.2);
+}
+
+.btn-secondary {
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(139, 154, 139, 0.15);
+}
+
+/* Card Hover Effects */
+.product-card {
+  transition: all 0.4s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(45, 74, 62, 0.15);
+}
+
+/* Fade Section Animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
